@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE 1</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="Application">
+        <ul>
+            <li v-for="(item,index) in list">
+                <div>{{ index + "." + item.name }}</div>
+                <div>{{ item.num }}</div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    list: [
+                        {
+                            name: "jack",
+                            num:"001"  
+                        },
+                        {
+                            name: "rose",
+                            num:"002"
+                        },
+                        {
+                            name: "tom",
+                            num:"003"
+                        },
+                        {
+                            name: "jerry",
+                            num:"004"
+                        },
+                        {
+                            name: "lucy",
+                            num:"005"
+                        }
+                    ]
+                }
+            }
+        }
+        Vue.createApp(App).mount('#Application')
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE 1</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="Application">
+        <h1 v-if="mark == 100">满分</h1>
+        <h1 v-else-if="mark > 60">及格</h1>
+        <h1 v-else>不及格</h1>
+        <div v-if="show">
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+        </div>
+        <template v-if="show">
+            <p>内容</p>
+            <p>内容</p>
+            <p>内容</p>
+        </template>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    show: true,
+                    mark: 61
+                }
+            }
+        }
+        Vue.createApp(App).mount('#Application')
+    </script>
+</body>
+</html>

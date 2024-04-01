@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE 1</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="Application">
+        <h1 v-show="show">v-show标题</h1>
+        <h1 v-if="show">v-if=show标题</h1>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    <!-- 修改一下true并观察浏览器elements中dom的变化?-->
+                    show: true
+                }
+            }
+        }
+        Vue.createApp(App).mount('#Application')
+    </script>
+</body>
+</html>
