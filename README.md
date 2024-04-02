@@ -1,19 +1,12 @@
 <template>
     <div>
-        <h1>{{ message }}</h1>
+        <h1>😊这是一个Vue学习仓库</h1>
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            message: 'Hello, Vue!'
-        }
-    }
-}
-</script>
+功能：
+1. 主要用于同步我的学习代码
+2. 分享给有需要的朋友
+3. 方便用于找大佬请教
 
-<style>
-/* Add your custom styles here */
-</style>
+
